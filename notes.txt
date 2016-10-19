@@ -1,0 +1,16 @@
+
+Node.js C++ Addons
+
+One of the most under appreciated features in Node is it's ability to wrap legacy C/C++ code.
+In this meetup I will explain where to start, how to do a simple "Hello world", and show other examples to get your brains ticking and thinking about making fast code even faster! 
+
+
+One of Node's most powerful features is its ability to wrap calls to C/C++ code. 
+This means you can wrap existing legacy code or write super fast functions to process data.
+The possibilities are endless!
+
+In this talk we will cover a simple hello world example, 
+discuss future-proofing code with NaN (Native Abstractions for Node),
+cover build processes with node-gyp,
+then move onto passing data around via objects and arrays,
+and finally wrap a call to the OpenCV C++ library.

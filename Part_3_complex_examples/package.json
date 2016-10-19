@@ -1,0 +1,14 @@
+{
+  "name": "part3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "complex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild",
+    "start": "node complex.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "gypfile": true
+}

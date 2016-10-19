@@ -1,0 +1,14 @@
+{
+  "name": "part4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "advanced.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild",
+    "start": "node advanced.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "gypfile": true
+}

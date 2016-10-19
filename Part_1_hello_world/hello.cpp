@@ -1,4 +1,4 @@
-// hello.cc
+// hello.cpp
 #include <node.h>
 
 // First define a namespace, or dont

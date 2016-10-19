@@ -60,7 +60,6 @@
     "xcode_version": "7.0",
     "nodedir": "/Users/jaguil1/.node-gyp/6.8.1",
     "copy_dev_lib": "true",
-    "standalone_static_library": 1,
-    "target": "v6.8.1"
+    "standalone_static_library": 1
   }
 }

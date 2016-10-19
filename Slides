@@ -1,0 +1,53 @@
+Slide 1 
+
+
+Introduction
+
+C++
+Node
+
+
+Most of these examples we won't run through, but I'll have the code posted so you can try on your own, the code examples will also be available on github so you can study them in depth.
+
+
+Settinng up a node-gyp file:
+  Setting up one of these files is very close to setting up the package.json. I like to think of this as the same, what you're trying to do is bind your libraries, pass your compiler flags, tell node-gyp what compiler to use, tell it where to put things, etc. The syntax is basically a json file.
+
+
+
+
+
+
+
+
+node-gyp change compiler:
+node-gyp add compiler flags:
+node-gyp bind a library such as OpenCV:
+  Note: I used BREW to install OpenCV and left everything as the defaults, if you've mucked with things, its best to locate where your OpenCV is located if you're wondering why things are broken.
+
+
+
+Passing data to C++
+  Passing javascript data to C++ means copying the data, so keep this in mind. Unlike other environments (Like the Java Native Interface), the data gets copied when it's passed along. This can create a bottleneck for large data sets, so remember to parse out the data to be passed or get a bigger server! Every data type is represented as a class in C++
+
+Passing a number
+  Passing a number is pretty straightforward
+
+Passing a string
+  Passing a string is a little trickier
+
+Passing an object
+  This is where things start getting interesting. 
+
+Passing an array
+
+Passing an array of objects
+
+Passing an array of arrays
+
+Passing an array of arrays of objects
+  You can continue this ad naeseum
+
+Passing callback functions
+
+Async work

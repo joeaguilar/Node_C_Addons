@@ -326,7 +326,7 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /usr/local/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "--toplevel-dir=." -I/Users/jaguil1/Programming/NodeJSMeetup/CAddons/Part_1_hello_world/build/config.gypi -I/usr/local/lib/node_modules/node-gyp/addon.gypi -I/Users/jaguil1/.node-gyp/6.8.1/include/node/common.gypi "--depth=." "-Goutput_dir=." "--generator-output=build" "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/jaguil1/.node-gyp/6.8.1" "-Dnode_gyp_dir=/usr/local/lib/node_modules/node-gyp" "-Dnode_lib_file=node.lib" "-Dmodule_root_dir=/Users/jaguil1/Programming/NodeJSMeetup/CAddons/Part_1_hello_world" binding.gyp
+cmd_regen_makefile = cd $(srcdir); /usr/local/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "--toplevel-dir=." -I/Users/jaguil1/Programming/NodeJSMeetup/CAddons/excersize_4/build/config.gypi -I/usr/local/lib/node_modules/node-gyp/addon.gypi -I/Users/jaguil1/.node-gyp/6.8.1/include/node/common.gypi "--depth=." "-Goutput_dir=." "--generator-output=build" "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/jaguil1/.node-gyp/6.8.1" "-Dnode_gyp_dir=/usr/local/lib/node_modules/node-gyp" "-Dnode_lib_file=node.lib" "-Dmodule_root_dir=/Users/jaguil1/Programming/NodeJSMeetup/CAddons/excersize_4" binding.gyp
 Makefile: $(srcdir)/../../../../.node-gyp/6.8.1/include/node/common.gypi $(srcdir)/../../../../../../usr/local/lib/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp
 	$(call do_cmd,regen_makefile)
 

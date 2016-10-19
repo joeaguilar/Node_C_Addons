@@ -47,7 +47,8 @@ INCS_Debug := \
 	-I/Users/jaguil1/.node-gyp/6.8.1/include/node \
 	-I/Users/jaguil1/.node-gyp/6.8.1/src \
 	-I/Users/jaguil1/.node-gyp/6.8.1/deps/uv/include \
-	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include
+	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include \
+	-I$(srcdir)/../../../../node_modules/nan
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=addon' \
@@ -92,10 +93,11 @@ INCS_Release := \
 	-I/Users/jaguil1/.node-gyp/6.8.1/include/node \
 	-I/Users/jaguil1/.node-gyp/6.8.1/src \
 	-I/Users/jaguil1/.node-gyp/6.8.1/deps/uv/include \
-	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include
+	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include \
+	-I$(srcdir)/../../../../node_modules/nan
 
 OBJS := \
-	$(obj).target/$(TARGET)/hello.o
+	$(obj).target/$(TARGET)/complex.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)

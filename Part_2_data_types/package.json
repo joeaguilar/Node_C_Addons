@@ -1,0 +1,14 @@
+{
+  "name": "part2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "datatypes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild",
+    "start": "node datatypes.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "gypfile": true
+}

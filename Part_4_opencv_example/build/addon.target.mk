@@ -33,7 +33,6 @@ CFLAGS_C_Debug := \
 CFLAGS_CC_Debug := \
 	-std=gnu++0x \
 	-fno-rtti \
-	-fno-exceptions \
 	-fno-threadsafe-statics \
 	-fno-strict-aliasing
 
@@ -47,7 +46,9 @@ INCS_Debug := \
 	-I/Users/jaguil1/.node-gyp/6.8.1/include/node \
 	-I/Users/jaguil1/.node-gyp/6.8.1/src \
 	-I/Users/jaguil1/.node-gyp/6.8.1/deps/uv/include \
-	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include
+	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include \
+	-I$(srcdir)/../../../../node_modules/nan \
+	-I/usr/local/include/opencv
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=addon' \
@@ -78,7 +79,6 @@ CFLAGS_C_Release := \
 CFLAGS_CC_Release := \
 	-std=gnu++0x \
 	-fno-rtti \
-	-fno-exceptions \
 	-fno-threadsafe-statics \
 	-fno-strict-aliasing
 
@@ -92,10 +92,13 @@ INCS_Release := \
 	-I/Users/jaguil1/.node-gyp/6.8.1/include/node \
 	-I/Users/jaguil1/.node-gyp/6.8.1/src \
 	-I/Users/jaguil1/.node-gyp/6.8.1/deps/uv/include \
-	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include
+	-I/Users/jaguil1/.node-gyp/6.8.1/deps/v8/include \
+	-I$(srcdir)/../../../../node_modules/nan \
+	-I/usr/local/include/opencv
 
 OBJS := \
-	$(obj).target/$(TARGET)/hello.o
+	$(obj).target/$(TARGET)/advanced.o \
+	$(obj).target/$(TARGET)/opencvexample.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
@@ -149,7 +152,16 @@ LIBTOOLFLAGS_Release := \
 	-Wl,-no_pie \
 	-Wl,-search_paths_first
 
-LIBS :=
+LIBS := \
+	-lopencv_core \
+	-lopencv_imgproc \
+	-lopencv_calib3d \
+	-lopencv_features2d \
+	-lopencv_objdetect \
+	-lopencv_video \
+	-lopencv_highgui \
+	-lopencv_flann \
+	-lopencv_ml
 
 $(builddir)/addon.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/addon.node: LIBS := $(LIBS)
