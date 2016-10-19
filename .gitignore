@@ -2,7 +2,8 @@
 # OSX files
 *.DS_Store
 
-build
-node_modules
+build/
+node_modules/
 notes*
 Reveal*
+Slides

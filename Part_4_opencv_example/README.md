@@ -1,3 +1,2 @@
-## SyncWorkers
 ## AsyncWorkers
 ## Wrapping OpenCV
